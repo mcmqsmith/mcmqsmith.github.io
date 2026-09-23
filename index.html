@@ -236,6 +236,129 @@
 @media print{.subject-strip,.subject-launcher{display:none!important}}
 </style>
 
+
+<style id="fieldnotes-visual-refresh-v11">
+/* Fieldnotes v1.1 visual refresh: expressive, calm, and dependency-free */
+body{
+  background:
+    radial-gradient(circle at 7% 4%, rgba(49,91,74,.08), transparent 26rem),
+    radial-gradient(circle at 94% 14%, rgba(138,99,60,.07), transparent 24rem),
+    var(--paper);
+}
+.topbar{box-shadow:0 1px 12px rgba(29,37,32,.035)}
+.mark{background:var(--ink);color:var(--paper);box-shadow:3px 3px 0 rgba(49,91,74,.18)}
+.subject-strip{box-shadow:0 6px 18px rgba(29,37,32,.035)}
+.subject-tab{transition:transform .14s ease,background .14s ease,border-color .14s ease}
+.subject-tab:hover{transform:translateY(-1px)}
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(135deg,rgba(255,253,247,.84),rgba(255,253,247,.48));
+  border:1px solid rgba(217,211,197,.92);
+  border-radius:22px;
+  padding:clamp(26px,5vw,52px);
+  box-shadow:0 16px 42px rgba(29,37,32,.055);
+}
+.hero:after{
+  content:"";position:absolute;right:-65px;top:-80px;width:245px;height:245px;
+  border:1px solid color-mix(in srgb,var(--accent) 28%,transparent);
+  border-radius:50%;box-shadow:
+    0 0 0 28px color-mix(in srgb,var(--accent) 5%,transparent),
+    0 0 0 58px color-mix(in srgb,var(--accent) 3%,transparent);
+  pointer-events:none
+}
+.hero h1{position:relative;z-index:1;max-width:940px}
+.hero .lede,.hero .hero-note,.hero .eyebrow{position:relative;z-index:1}
+#home>.hero{--accent:#315b4a}
+#apworld{--accent:#78522d;--course-soft:#f2e6d6}
+#alg2{--accent:#315d79;--course-soft:#e4eef4}
+#chem{--accent:#31705d;--course-soft:#e2f0ea}
+#apbio{--accent:#537239;--course-soft:#e9f0df}
+#eng1{--accent:#80575f;--course-soft:#f2e5e8}
+#eng2{--accent:#725486;--course-soft:#ede5f2}
+.subject:not(#home)>.hero{
+  border-left:7px solid var(--accent);
+  background:
+    linear-gradient(135deg,color-mix(in srgb,var(--course-soft) 68%,white),rgba(255,253,247,.72));
+}
+.subject:not(#home)>.hero .hero-note{
+  background:color-mix(in srgb,var(--course-soft) 75%,white);
+  border-color:color-mix(in srgb,var(--accent) 22%,var(--line));
+}
+.study-rhythm{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px;position:relative;z-index:1;
+  max-width:760px
+}
+.study-rhythm span{
+  background:rgba(255,255,255,.64);border:1px dashed color-mix(in srgb,var(--accent) 26%,var(--line));
+  border-radius:11px;padding:10px 12px;font-size:.84rem;font-weight:750
+}
+.subject-launcher{
+  margin-top:24px;padding:32px;border:1px solid var(--line);border-radius:22px;
+  background:rgba(255,253,247,.62);box-shadow:0 12px 34px rgba(29,37,32,.035)
+}
+.launch-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.launch-button{
+  position:relative;overflow:hidden;min-height:174px;padding:20px 20px 18px;
+  border-radius:17px;background:var(--card);box-shadow:0 5px 0 rgba(29,37,32,.04);
+  isolation:isolate
+}
+.launch-button:before{
+  content:"";position:absolute;inset:0 0 auto 0;height:6px;background:var(--card-accent,#315b4a)
+}
+.launch-button:after{
+  content:"";position:absolute;width:105px;height:105px;border-radius:50%;right:-34px;bottom:-42px;
+  background:color-mix(in srgb,var(--card-accent,#315b4a) 10%,transparent);z-index:-1
+}
+.launch-button:nth-child(1){--card-accent:#78522d}
+.launch-button:nth-child(2){--card-accent:#315d79}
+.launch-button:nth-child(3){--card-accent:#31705d}
+.launch-button:nth-child(4){--card-accent:#537239}
+.launch-button:nth-child(5){--card-accent:#80575f}
+.launch-button:nth-child(6){--card-accent:#725486}
+.launch-button:hover,.launch-button:focus-visible{
+  transform:translateY(-4px) rotate(-.15deg);box-shadow:0 14px 24px rgba(29,37,32,.09);
+  border-color:color-mix(in srgb,var(--card-accent) 42%,var(--line))
+}
+.course-symbol{
+  width:44px;height:44px;display:grid;place-items:center;margin:4px 0 16px;border-radius:12px;
+  color:var(--card-accent);background:color-mix(in srgb,var(--card-accent) 10%,white);
+  border:1px solid color-mix(in srgb,var(--card-accent) 22%,var(--line));
+  font-family:Georgia,"Times New Roman",serif;font-size:1.25rem;font-weight:700
+}
+.launch-button strong{font-size:1.46rem}
+.launch-kicker{color:var(--card-accent)!important}
+.launch-path{
+  display:block;margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);
+  font-size:.76rem!important;font-weight:700;color:#58615b!important
+}
+.section{scroll-margin-top:130px}
+.card,.route,.module,.metric{
+  box-shadow:0 5px 16px rgba(29,37,32,.028);
+  transition:border-color .14s ease,box-shadow .14s ease,transform .14s ease
+}
+.route:hover,.metric:hover{transform:translateY(-2px);box-shadow:0 9px 21px rgba(29,37,32,.055)}
+.module>summary:hover{background:color-mix(in srgb,var(--course-soft,#e9efe9) 33%,white)}
+.module-num{color:var(--accent)}
+.progress-bar{background:var(--accent)}
+::selection{background:color-mix(in srgb,var(--accent) 24%,white)}
+@media(max-width:900px){.launch-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){
+  .hero{border-radius:16px;padding:25px 19px}
+  .hero:after{opacity:.55;right:-125px}
+  .study-rhythm{grid-template-columns:1fr}
+  .subject-launcher{padding:22px 15px}
+  .launch-grid{grid-template-columns:1fr}
+  .launch-button{min-height:145px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto!important}
+  .launch-button,.subject-tab,.card,.route,.module,.metric{transition:none!important}
+}
+@media print{
+  .hero,.subject-launcher{box-shadow:none;background:white}
+  .study-rhythm{display:none}
+}
+</style>
 </head>
 <body>\n<a class="skip-link" href="#mainContent">Skip to study content</a>
 <div class="topbar">
@@ -277,6 +400,11 @@
     <h1>Choose a subject. Then choose what you need.</h1>
     <p class="lede">Start with your class below. Fieldnotes then helps you understand the idea, see it modeled, practice it, diagnose a mistake, or review for an assessment.</p>
     <div class="hero-note">✳ Standards shape the content. Student problems shape the navigation.</div>
+    <div class="study-rhythm" aria-label="Fieldnotes study rhythm">
+      <span>1 · Find the gap</span>
+      <span>2 · Practice the move</span>
+      <span>3 · Check it again</span>
+    </div>
   </div>
 
   <div class="subject-launcher">
@@ -285,28 +413,40 @@
     <p class="lede">Open a course directly. You can return to this screen at any time with <b>All Subjects</b> above.</p>
     <div class="launch-grid">
       <button type="button" class="launch-button" data-subject-go="apworld">
+        <span class="course-symbol" aria-hidden="true">◎</span>
         <span class="launch-kicker">History · AP</span><strong>AP World History</strong>
         <span>9 units · historical reasoning · writing practice</span>
+        <span class="launch-path">Connect regions, causes & change</span>
       </button>
       <button type="button" class="launch-button" data-subject-go="alg2">
+        <span class="course-symbol" aria-hidden="true">ƒx</span>
         <span class="launch-kicker">Mathematics · TEKS</span><strong>Algebra II</strong>
         <span>Functions · systems · quadratics · logs · modeling</span>
+        <span class="launch-path">Recognize structure → choose a move</span>
       </button>
       <button type="button" class="launch-button" data-subject-go="chem">
+        <span class="course-symbol" aria-hidden="true">⚗</span>
         <span class="launch-kicker">Science · TEKS</span><strong>Chemistry</strong>
         <span>Matter · atoms · bonding · stoichiometry · gases · energy</span>
+        <span class="launch-path">Observe → particles → symbols → numbers</span>
       </button>
       <button type="button" class="launch-button" data-subject-go="apbio">
+        <span class="course-symbol" aria-hidden="true">⌬</span>
         <span class="launch-kicker">Science · AP</span><strong>AP Biology</strong>
         <span>8 units · science practices · FRQ reasoning</span>
+        <span class="launch-path">Mechanism → evidence → claim</span>
       </button>
       <button type="button" class="launch-button" data-subject-go="eng1">
+        <span class="course-symbol" aria-hidden="true">¶</span>
         <span class="launch-kicker">English · Pre-AP</span><strong>Pre-AP English 1</strong>
         <span>Close reading · evidence · craft · analytical writing</span>
+        <span class="launch-path">Notice → explain → prove</span>
       </button>
       <button type="button" class="launch-button" data-subject-go="eng2">
+        <span class="course-symbol" aria-hidden="true">↔</span>
         <span class="launch-kicker">English · Pre-AP</span><strong>Pre-AP English 2</strong>
         <span>Argument · persuasion · synthesis · purpose</span>
+        <span class="launch-path">Track reasoning → synthesize → argue</span>
       </button>
     </div>
   </div>
