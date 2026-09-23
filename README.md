@@ -1,2 +1,2 @@
-# https-mcmqsmith.github.io-
+# mcmqsmith.github.io-
 Hopefully the Home of all of my creations
