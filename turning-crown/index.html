@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111827"><title>The Turning Crown · Tournament Portal</title>
+<style>
+:root{color-scheme:dark;--bg:#0c1420;--surface:#162332;--gold:#e1c783;--ink:#f3eddb;--muted:#aebbd0;--edge:#40546d}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#25344a 0,var(--bg) 60%);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:920px;margin:auto;padding:clamp(18px,5vw,50px)}header{text-align:center;margin:28px 0 34px}
+.eyebrow{color:var(--gold);letter-spacing:.24em;font-size:.76rem;font-weight:750;text-transform:uppercase}
+h1{font-family:Georgia,serif;font-size:clamp(2.8rem,7vw,5rem);line-height:1.1;margin:12px 0;color:var(--gold)}
+.lead{color:var(--muted);font-size:1.08rem;max-width:620px;margin:14px auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
+.card{padding:25px;background:var(--surface);border:1px solid var(--edge);border-radius:16px;box-shadow:0 14px 32px #0004}
+.card h2{font:1.65rem Georgia,serif;margin:0 0 9px;color:var(--gold)}
+.card p{min-height:68px;color:var(--muted);margin:8px 0 25px}
+.card a{display:block;padding:13px 16px;border-radius:10px;color:#182235;background:var(--gold);font-weight:750;text-decoration:none;text-align:center}
+.card a:focus-visible{outline:3px solid white;outline-offset:3px}
+.note{margin-top:20px;padding:18px 22px;border-left:3px solid var(--gold);background:#101b2a;border-radius:8px;color:var(--muted)}
+.note strong{color:var(--ink)}footer{text-align:center;margin:36px 0;color:var(--muted);font-size:.88rem}
+@media(max-width:600px){.card p{min-height:0}}
+</style></head><body><main>
+<header><div class="eyebrow">The Six Bells · Level 10 Exhibition</div>
+<h1>The Turning Crown</h1>
+<p class="lead">Six battles. One Crown. A tournament built for three adventurers and an arena where victory demands more than damage.</p></header>
+<section class="cards" aria-label="Choose an experience">
+<article class="card"><h2>For the Players</h2><p>Learn the arena rules, see publicly announced challenges, and track personal HP and resources on your own phone.</p><a href="./players.html">Open Player Guide</a></article>
+<article class="card"><h2>On the TV</h2><p>Display the arena, round tracker, Crown control, hazard announcements and shared scoreboard. Public information only.</p><a href="./arena.html">Open Arena &amp; Scoreboard</a></article>
+</section>
+<div class="note"><strong>DM instructions:</strong> Your private referee cockpit is intentionally <strong>not hosted</strong> on this public website. Open the downloaded DM file separately. The screens don't live-sync: the DM can transfer a public scoreboard snapshot by copying its status code to the TV's import control. Player resource notes stay on their individual devices. Do not mirror the private DM view.</div>
+<footer>Turning Crown digital portal · v0.5 hosting wrapper · Underlying public guides v0.4 · Nexus homebrew, not official D&amp;D rules</footer>
+</main></body></html>
